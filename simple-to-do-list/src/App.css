@@ -1,0 +1,114 @@
+body {
+  background-color: #f7f7f7;
+  /* Light grey background for a neutral look */
+  font-family: 'Arial', sans-serif;
+  /* Modern sans-serif font */
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  /* Center .App in the viewport */
+  align-items: center;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* Center the text */
+  background-color: #ffffff;
+  /* White background for the app */
+  padding: 2rem;
+  /* Spacing around the content */
+  border-radius: 8px;
+  /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for depth */
+  width: 80%;
+  /* Adjust the width as needed */
+  max-width: 500px;
+  /* Maximum width of the app */
+}
+
+
+.App p {
+  margin-bottom: 0.5rem;
+  color: #333333;
+  /* Dark grey color for contrast */
+  font-size: 1.5rem;
+  /* Larger font size for the title */
+  margin: 0 0 1rem 0;
+  /* Space below the title */
+  /* Adjust as per your design */
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  /* Stack children vertically */
+  align-items: center;
+  justify-content: flex-start;
+  /* Align to the top */
+}
+
+.button-input-container {
+  display: flex;
+  flex-direction: row;
+  /* Align children in a row */
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  /* Add space below the button and input */
+}
+
+/* No need for .list-container if it's just the ul element */
+ul {
+  list-style: none;
+  /* Remove default list styling if desired */
+  padding-left: 0;
+  /* Remove default padding if desired */
+  text-align: left;
+  /* Align text to the left */
+  width: 100%;
+  /* Set a specific width or max-width if desired */
+}
+
+input[type="text"] {
+  border: 2px solid #dddddd;
+  border-radius: 4px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  flex-grow: 1;
+  margin-right: 0.5rem;
+}
+
+
+button {
+  background-color: #5cb85c;
+  /* Bootstrap 'success' green */
+  color: white;
+  /* White text for contrast */
+  border: none;
+  /* No border */
+  border-radius: 4px;
+  /* Rounded corners */
+  padding: 0.5rem 1rem;
+  /* Vertical and horizontal padding */
+  font-size: 1rem;
+  /* Font size consistent with the input */
+  cursor: pointer;
+  /* Pointer cursor on hover */
+  transition: background-color 0.3s;
+  /* Smooth background color transition */
+}
+
+button:hover {
+  background-color: #4cae4c;
+  /* A darker green on hover */
+}
+
+/* Assuming .button-input-container is the class for the parent container of your button and input */
