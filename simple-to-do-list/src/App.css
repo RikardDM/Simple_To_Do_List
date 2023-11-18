@@ -1,6 +1,6 @@
 body {
   background-color: #f7f7f7;
-  /* Light grey background for a neutral look */
+
   font-family: 'Arial', sans-serif;
   /* Modern sans-serif font */
   margin: 0;
@@ -52,7 +52,7 @@ body {
   /* Stack children vertically */
   align-items: center;
   justify-content: flex-start;
-  /* Align to the top */
+
 }
 
 .button-input-container {
@@ -65,7 +65,6 @@ body {
   /* Add space below the button and input */
 }
 
-/* No need for .list-container if it's just the ul element */
 ul {
   list-style: none;
   /* Remove default list styling if desired */

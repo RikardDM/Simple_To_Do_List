@@ -18,20 +18,26 @@ function App() {
 
   const handleClick = () => {
     if (inputValue.trim() !== '') {
-      setTaskslist([...taskslist, inputValue])
+      setTaskslist([...taskslist, inputValue.toUpperCase()])
       setInputValue('')
     }
+  }
+
+  const deleteItem = (item) => {
+    const filteredList = taskslist.filter((element) => element !== item)
+    setTaskslist(filteredList)
+
   }
 
 
   return (
     <div className='App'>
-      <p>Simple To do list</p>
+      <p>Rika To do list</p>
       <div className='button-input-container'>
         <Button label='Add' onClick={handleClick} />
         <Input type="text" placeholder="Add a task..." onInput={handleInput} value={inputValue} />
       </div>
-      <List list={taskslist} /> {/* This is now outside the .button-input-container */}
+      <List list={taskslist} deleteItem={deleteItem} />
     </div>
   );
 }
