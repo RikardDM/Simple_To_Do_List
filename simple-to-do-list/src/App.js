@@ -18,7 +18,9 @@ function App() {
 
   const handleClick = () => {
     if (inputValue.trim() !== '') {
-      setTaskslist([...taskslist, inputValue.toUpperCase()])
+      const myTaskList = [...taskslist, inputValue.toUpperCase()]
+      setTaskslist(myTaskList)
+      localStorage.setItem('myTaskList', JSON.stringify(myTaskList))
       setInputValue('')
     }
   }
@@ -26,6 +28,7 @@ function App() {
   const deleteItem = (item) => {
     const filteredList = taskslist.filter((element) => element !== item)
     setTaskslist(filteredList)
+    localStorage.setItem('myTaskList', JSON.stringify(filteredList))
 
   }
 
@@ -37,7 +40,7 @@ function App() {
         <Button label='Add' onClick={handleClick} />
         <Input type="text" placeholder="Add a task..." onInput={handleInput} value={inputValue} />
       </div>
-      <List list={taskslist} deleteItem={deleteItem} />
+      <List list={JSON.parse(localStorage.getItem('myTaskList'))} deleteItem={deleteItem} />
     </div>
   );
 }
